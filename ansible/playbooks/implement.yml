@@ -24,5 +24,5 @@
   - debug:
       msg: "{{item}}"
     with_items:
-      - "{{ lookup('env','workspace') }}
+      - "{{ lookup('env','WORKSPACE') }}"
 
