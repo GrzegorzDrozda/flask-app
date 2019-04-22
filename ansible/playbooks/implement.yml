@@ -2,7 +2,7 @@
   tasks:
   - name: make dirs 
     file: 
-      path: /opt/app
+      path: "{{item}}"
       state: directory
     with_items:
       - /opt/app
@@ -10,13 +10,15 @@
 
 
   - name: copy app file
-    src: app.py
-    dest: /opt/app/app.py
+    copy:
+      src: app.py
+      dest: /opt/app/app.py
 
 
   - name: copy app file
-    src: templates/index.html
-    dest: /opt/app/templates/index.html
+    copy:
+      src: templates/index.html
+      dest: /opt/app/templates/index.html
 
 
 
