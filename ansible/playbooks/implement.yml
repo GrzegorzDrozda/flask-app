@@ -12,13 +12,13 @@
 
   - name: copy app file
     copy:
-      src: app.py
+      src: /var/lib/jenkins/workspace/flask-app_master/app.py
       dest: /opt/app/app.py
 
 
   - name: copy app file
     copy:
-      src: templates/index.html
+      src: /var/lib/jenkins/workspace/flask-app_master/templates/index.html
       dest: /opt/app/templates/index.html
 
 
