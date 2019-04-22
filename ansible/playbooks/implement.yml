@@ -23,8 +23,8 @@
       src: "{{workspace}}/templates/index.html"
       dest: /opt/app/templates/index.html
 
-  - debug:
-      msg: "{{item}}"
-    with_items:
-      - "{{ lookup('env','WORKSPACE') }}"
+#  - debug:
+#      msg: "{{item}}"
+#    with_items:
+#      - "{{ lookup('env','WORKSPACE') }}"
 
