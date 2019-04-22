@@ -14,7 +14,7 @@
 
   - name: copy app file
     copy:
-      src: "{{workspace}}/flask-app_master/app.py"
+      src: "{{workspace}}/app.py"
       dest: /opt/app/app.py
 
 
