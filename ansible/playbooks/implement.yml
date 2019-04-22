@@ -21,5 +21,8 @@
       src: /var/lib/jenkins/workspace/flask-app_master/templates/index.html
       dest: /opt/app/templates/index.html
 
-
+  - debug:
+      msg: "{{item}}"
+    with_items:
+      - "{{ lookup('env') }}
 
