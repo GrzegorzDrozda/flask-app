@@ -1,5 +1,7 @@
 - hosts: all
   become: yes
+  vars:
+    workspace: "{{ lookup('env','WORKSPACE') }}"
   tasks:
   - name: make dirs 
     file: 
@@ -12,13 +14,13 @@
 
   - name: copy app file
     copy:
-      src: /var/lib/jenkins/workspace/flask-app_master/app.py
+      src: "{{workspace}}/flask-app_master/app.py"
       dest: /opt/app/app.py
 
 
   - name: copy app file
     copy:
-      src: /var/lib/jenkins/workspace/flask-app_master/templates/index.html
+      src: "{{workspace}}/templates/index.html"
       dest: /opt/app/templates/index.html
 
   - debug:
