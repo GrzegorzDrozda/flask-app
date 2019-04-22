@@ -4,6 +4,7 @@ pipeline {
         stage('Deploy to Saging') {
             steps {
                 echo 'Deploying to staging'
+                ansiblePlaybook(credentialsId: 'jenkins1', inventory: 'ansible/inventories/hosts', playbook: 'ansible/playbooks/implement.yml')
                 //sh './gradlew build --no-daemon'
                 //#rchiveArtifacts artifacts: 'dist/trainSchedule.zip'
             }
