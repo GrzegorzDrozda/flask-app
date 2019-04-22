@@ -1,6 +1,6 @@
 node('dockerhost') {
   def appName = 'flask'
-  def imageTag = "cloudyuga/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
+  def imageTag = "GrzegorzDrozda/${appName}:${env.BRANCH_NAME}.${env.BUILD_NUMBER}"
 
   checkout scm
 
